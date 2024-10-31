@@ -24,7 +24,7 @@ def main():
             "filter": "mp4,webm"
         }
         response = requests.get(url, params=params)
-        json = response.json()
+        info_link = response.json()
         picture_link = json['url']
         link, picture_extension = os.path.splitext(picture_link)
         filename = f"dog_{num}{picture_extension}"
